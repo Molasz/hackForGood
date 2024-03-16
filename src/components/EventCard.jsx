@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 import LocationOnOutlined from "@mui/icons-material/LocationOnOutlined";
+import { ShareOutlined } from "@mui/icons-material";
 
 function EventCard({ data }) {
   let navigate = useNavigate();
@@ -15,25 +16,28 @@ function EventCard({ data }) {
       style={{
         background: "#1E3D6D",
         borderRadius: "32px",
-        maxWidth: "700px",
+        maxWidth: "750px",
       }}
     >
       <img
         src={data.image}
         alt="Event cover"
         className="object-contain aspect-video rounded-lg"
-        style={{ width: "350px", borderRadius: "20%" }}
+        style={{ width: "400px", borderRadius: "20%" }}
       />
-      <div className="ml-8 h-full text-white flex flex-col justify-between">
-        <div>
+      <div className="ml-8 h-full text-white flex flex-col">
+        <div className="mb-8">
           <Typography component="div" variant="h5" className="font-bold">
             {data.title}
           </Typography>
           <div className="mb-4 flex">
-            <LocationOnOutlined />
+            <LocationOnOutlined className="cursor-pointer" />
+            <ShareOutlined className="cursor-pointer" />
+            {/*
             <Typography component="div" variant="h7" className="font-bold">
               {data.ubication}
             </Typography>
+            */}
           </div>
           <Typography
             component="div"
