@@ -23,7 +23,7 @@ function EventCard({ data }) {
         src={data.image}
         alt="Event cover"
         className="object-contain aspect-video rounded-lg"
-        style={{ width: "400px", borderRadius: "20%" }}
+        style={{ width: "400px", borderRadius: "32px" }}
       />
       <div className="ml-8 h-full text-white flex flex-col">
         <div className="mb-8">
@@ -33,19 +33,19 @@ function EventCard({ data }) {
           <div className="mb-4 flex">
             <LocationOnOutlined className="cursor-pointer" />
             <ShareOutlined className="cursor-pointer" />
-            {/*
-            <Typography component="div" variant="h7" className="font-bold">
-              {data.ubication}
-            </Typography>
-            */}
           </div>
-          <Typography
-            component="div"
-            variant="h7"
-            className="hidden overflow-hidden hover:overflow-scroll  md:block"
+          <div
+            className="overflow-hidden hover:overflow-scroll"
+            style={{ maxHeight: "100px" }}
           >
-            {data.description}
-          </Typography>
+            <Typography
+              component="div"
+              variant="h7"
+              className="hidden md:block"
+            >
+              {data.description}
+            </Typography>
+          </div>
         </div>
         <Button
           variant="contained"

@@ -126,7 +126,7 @@ function Header() {
   );
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <AppBar position="static">
         <Toolbar>
           <Typography
@@ -136,7 +136,7 @@ function Header() {
             onClick={redirectHome}
             className="cursor-pointer"
           >
-            LOGO
+            <img src="../logo.png" alt="Logo" style={{ width: '48px' }} />
           </Typography>
           <Search>
             <SearchIconWrapper>
