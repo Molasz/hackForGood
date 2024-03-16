@@ -79,7 +79,7 @@ function Home() {
             variant="outlined"
           />
           <TextField
-            onChange={({ target }) => onInput(target.value, 'description')}
+            onChange={({ target }) => onInput(target, 'description')}
             multiline
             required
             rows="4"
